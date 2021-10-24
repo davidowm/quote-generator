@@ -1,0 +1,23 @@
+{
+  "name": "quote-generator",
+  "version": "1.0.0",
+  "description": "generate random quotes",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidowm/quote-generator.git"
+  },
+  "author": "marci davidow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidowm/quote-generator/issues"
+  },
+  "homepage": "https://github.com/davidowm/quote-generator#readme",
+  "devDependencies": {
+    "parcel": "^2.0.0"
+  }
+}
