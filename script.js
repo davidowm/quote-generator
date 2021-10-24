@@ -70,7 +70,7 @@ const facebookShare = function () {
   const quote = quoteText.textContent;
   const author = authorText.textContent;
   const title = 'Modern Quote Generator';
-  const personalLink = 'davidowm/quote-generator';
+  const personalLink = 'https://davidowm-quote-generator.netlify.app/';
   const facebookUrl = `http://www.facebook.com/sharer.php?s=100&p[title]=${title}&p[url]=${encodeURIComponent(
     personalLink
   )}&p[quote]=${quote} ~${author}`;
