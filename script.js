@@ -1,13 +1,10 @@
 'use strict';
+import { API_URL, TWITTER_URL } from '/config.js';
 //todo: Create constant file
 //todo: modify functions
 //todo: modify if statements
 //todo: add facebook button
-//todo: add instagram button
 //todo: add linked in button (maybe)
-//todo: add logo (figure out how to create logo - Look up favicon too)
-//todo: use mvc pattern (maybe - for practice)
-//todo: get readme file
 
 const quoteContainer = document.getElementById('quote-container');
 const quoteText = document.getElementById('quote');
@@ -54,9 +51,9 @@ function newQuote() {
 // Get Quotes from API using async request
 async function getQuotes() {
   showLoadingSpinner();
-  const apiUrl = 'https://type.fit/api/quotes';
+  //const apiUrl = 'https://type.fit/api/quotes';
   try {
-    const response = await fetch(apiUrl);
+    const response = await fetch(API_URL);
     apiQuotes = await response.json();
     newQuote();
   } catch (error) {
@@ -67,7 +64,8 @@ async function getQuotes() {
 
 //Tweet Quote
 function tweetQuote() {
-  const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent}`;
+  // const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent}`;
+  const twitterUrl = `${TWITTER_URL}${quoteText.textContent} - ${authorText.textContent}`;
   window.open(twitterUrl, '_blank');
 }
 
